@@ -1,0 +1,12 @@
+{
+  "name": "bayonai-mcp-release",
+  "version": "1.0.13",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "test": "vitest run packages/bayonai-mcp/src"
+  },
+  "devDependencies": {
+    "vitest": "4.1.7"
+  }
+}
