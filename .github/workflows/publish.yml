@@ -40,7 +40,7 @@ jobs:
       - name: Publish packed artifact with provenance
         env:
           RELEASE_VERSION: ${{ inputs.version }}
-        run: npm publish "tmp/bayonai-mcp-${RELEASE_VERSION}.tgz" --provenance --access public --ignore-scripts
+        run: npm publish "./tmp/bayonai-mcp-${RELEASE_VERSION}.tgz" --provenance --access public --ignore-scripts
       - name: Check published artifact integrity
         env:
           RELEASE_VERSION: ${{ inputs.version }}
