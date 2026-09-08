@@ -1,6 +1,6 @@
 # MCP-001 — Retain the Bayon consent integration profile
 
-Status: In progress
+Status: Completed
 
 Difficulty: M
 
@@ -42,6 +42,20 @@ rendering, and authorization enforcement in the host application.
 - The packed-package smoke check confirms the integration profile is included.
 - Release `@bayonai/mcp@1.0.14` through the main-only provenance workflow and
   verify the public registry artifact.
+
+## Release evidence
+
+- `@bayonai/mcp@1.0.14` was published with npm provenance on 2026-09-08.
+- Package lint, 13 tests, build, local pack, and packed-consumer smoke passed in
+  both the local release checkout and GitHub Actions.
+- npm returned the published version and integrity, and a registry download
+  contained the expected 31 files, including `docs/authorization-consent.md`.
+- The downloaded package contents exactly matched the locally verified package
+  contents.
+- npm propagation exceeded the verifier's previous 60-second window, so the
+  default was raised to 180 seconds for future releases. The initial workflow
+  run therefore reports a failed final verification step even though publication
+  and subsequent registry verification succeeded.
 
 ## Related plans
 

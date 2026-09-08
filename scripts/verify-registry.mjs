@@ -10,9 +10,9 @@ const expected =
   createHash("sha512").update(readFileSync(artifact)).digest("base64");
 const attempts = readBoundedInteger(
   process.env.REGISTRY_VERIFY_ATTEMPTS,
-  20,
+  60,
   1,
-  30,
+  120,
 );
 const delayMs = readBoundedInteger(
   process.env.REGISTRY_VERIFY_DELAY_MS,
