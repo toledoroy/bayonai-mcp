@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.14 - 2026-09-08
 
 - Added the Bayon authorization-consent integration profile covering existing
   sessions, canonical application login, account switching, write-consent

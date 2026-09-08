@@ -1,6 +1,6 @@
 # MCP-001 — Retain the Bayon consent integration profile
 
-Status: Completed
+Status: In progress
 
 Difficulty: M
 
@@ -40,9 +40,9 @@ rendering, and authorization enforcement in the host application.
 
 - Package lint and tests pass.
 - The packed-package smoke check confirms the integration profile is included.
-- The npm package is not published as part of this task.
+- Release `@bayonai/mcp@1.0.14` through the main-only provenance workflow and
+  verify the public registry artifact.
 
 ## Related plans
 
 - Bounded: `docs/superpowers/plans/2026-09-05-TL-F005-mcp-endpoint-audit-remediation.md`
-

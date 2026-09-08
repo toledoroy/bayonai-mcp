@@ -1,6 +1,6 @@
 {
   "name": "@bayonai/mcp",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Shared MCP OAuth and protocol helpers for Bayon apps.",
   "keywords": [
     "mcp",
