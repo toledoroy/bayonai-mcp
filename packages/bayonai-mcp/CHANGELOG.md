@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added the Bayon authorization-consent integration profile covering existing
+  sessions, canonical application login, account switching, write-consent
+  controls, host design-system reuse, and OAuth return-flow safety.
+
 ## 1.0.13 - Release candidate
 
 - Added MCP `2026-07-28` stateless discovery and complete-result helpers while

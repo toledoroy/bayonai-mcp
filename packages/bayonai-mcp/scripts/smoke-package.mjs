@@ -43,6 +43,8 @@ execFileSync(
     `
       import * as esm from "@bayonai/mcp";
       import { createRequire } from "node:module";
+      import { readFileSync } from "node:fs";
+      import { resolve } from "node:path";
       const require = createRequire(import.meta.url);
       const cjs = require("@bayonai/mcp");
       const verifier = "a".repeat(64);
@@ -62,6 +64,16 @@ execFileSync(
       }
       if (!cjs.MCP_READ_ONLY_CLOSED_WORLD_TOOL_ANNOTATIONS.readOnlyHint) {
         throw new Error("CJS safety annotation export failed");
+      }
+      const consentProfile = readFileSync(
+        resolve(
+          process.cwd(),
+          "node_modules/@bayonai/mcp/docs/authorization-consent.md",
+        ),
+        "utf8",
+      );
+      if (!consentProfile.includes("## Session-aware flow")) {
+        throw new Error("Authorization consent integration profile is missing");
       }
       console.log("CJS and ESM package smoke passed");
     `,

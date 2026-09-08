@@ -15,6 +15,11 @@ This package contains app-agnostic helpers for remote MCP servers:
 Application code remains responsible for its own MCP tools/resources/prompts,
 business authorization, persistence, audit logging, and user-consent UI.
 
+Bayon applications should follow the published
+[authorization consent integration profile](docs/authorization-consent.md) for
+session reuse, canonical login, account switching, consent controls, host-app
+visual consistency, and authorization-request safety.
+
 ## Install
 
 ```sh
@@ -112,6 +117,9 @@ Keep these app-specific concerns outside `@bayonai/mcp`:
 - Firebase Auth, service-token, or admin consent flows.
 - Product-specific scopes such as `thunderlist.read` or `bounded.write`.
 - Audit logging and mutation authorization.
+
+The package documents the shared consent experience, but applications own its
+implementation and enforce consent server-side.
 
 ## Release Checks
 
